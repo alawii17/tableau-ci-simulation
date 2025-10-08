@@ -19,4 +19,5 @@ jobs:
           PUBLISHER_NAME: ${{ secrets.PUBLISHER_NAME }}
           TARGET_DIR: output
         run: |
+          echo "Menjalankan publish sebagai $PUBLISHER_NAME..."
           bash scripts/publish.sh
