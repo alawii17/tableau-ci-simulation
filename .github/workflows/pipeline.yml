@@ -1,0 +1,21 @@
+name: Simulasi CI/CD Publish
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Jalankan simulasi publish
+        env:
+          PUBLISHER_NAME: ${{ secrets.PUBLISHER_NAME }}
+          TARGET_DIR: output
+        run: |
+          bash scripts/publish.sh

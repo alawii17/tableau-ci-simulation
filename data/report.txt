@@ -1,0 +1,2 @@
+Ini adalah file simulasi data yang akan dipublish.
+Update terakhir: $(date)
